@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMKM Desa Pohgading</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <div style="width:52px;height:52px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:var(--primary);">P</div>
+                <div class="logo-text">
+                    <h1>Desa Pohgading</h1>
+                    <span>Kecamatan Gembong · Kabupaten Pati</span>
+                    <span class="kec"><i class="fas fa-map-pin"></i> Jawa Tengah</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#profil">Profil</a></li>
+                    <li><a href="index.html#layanan">Layanan</a></li>
+                    <!-- <li><a href="index.html#transparansi">Transparansi</a></li> -->
+                    <li><a href="index.html#potensi">Potensi</a></li>
+                    <!-- <li><a href="pariwisata.html">Wisata</a></li> -->
+                    <li><a href="umkm.html" class="active">UMKM</a></li>
+                    <li><a href="index.html#kabar">Kabar</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+                <div class="header-jam">
+                    <i class="fas fa-clock"></i>
+                    <span>08.00–14.00 WIB</span>
+                </div>
+                <button class="btn-search" id="btnSearch" aria-label="Cari"><i class="fas fa-search"></i></button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH OVERLAY ===== -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="box">
+            <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+            <input type="text" id="searchInput" placeholder="Cari produk UMKM..." />
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- ===== HERO UMKM ===== -->
+    <section class="hero-umkm">
+        <div class="container">
+            <h1><i class="fas fa-store"></i> UMKM Desa</h1>
+            <p>Produk unggulan dari warga Desa Pohgading. Dukung ekonomi lokal dengan membeli produk-produk berkualitas.</p>
+        </div>
+    </section>
+
+    <!-- ===== DAFTAR UMKM ===== -->
+    <section class="section" id="umkm">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-boxes"></i> Produk UMKM</h2>
+                <div class="line"></div>
+            </div>
+            <div class="umkm-grid" id="umkmGrid">
+                <!-- akan diisi JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DETAIL OVERLAY — FULL SCREEN ===== -->
+    <div class="detail-overlay" id="detailOverlay">
+        <div class="detail-container">
+            <div class="detail-header">
+                <h2 id="detailTitle">Produk UMKM</h2>
+                <button class="close-detail" id="closeDetail"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="detail-body">
+                <!-- Galeri Slider -->
+                <div class="gallery-slider">
+                    <div class="gallery-track" id="galleryTrack">
+                        <!-- diisi JS -->
+                    </div>
+                    <div class="gallery-nav" id="galleryNav">
+                        <!-- diisi JS -->
+                    </div>
+                </div>
+
+                <!-- Informasi Detail -->
+                <div class="detail-info">
+                    <span class="category-label" id="detailCategory">Kategori</span>
+                    <h3 id="detailFullTitle">Nama Produk</h3>
+                    <div class="description" id="detailDesc">
+                        Deskripsi lengkap produk.
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info">
+                            <strong>Kontak / Pemesanan</strong>
+                            <span id="detailContact">+62 812-3456-7890</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-back" id="backFromDetail"><i class="fas fa-arrow-left"></i> Kembali ke Daftar UMKM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4><i class="fas fa-flag" style="color:var(--secondary-light);"></i> Desa Pohgading</h4>
+                <p>Pemerintahan Desa Pohgading, Kecamatan Gembong, Kabupaten Pati, Jawa Tengah. Melayani dengan hati, mengabdi untuk rakyat.</p>
+                <div class="jam-footer">
+                    <i class="fas fa-clock"></i>
+                    <span>Jam Pelayanan: Senin–Jumat 08.00 – 14.00 WIB</span>
+                </div>
+                <p style="margin-top:8px;font-size:0.8rem;"><i class="fas fa-code"></i> Dibangun untuk warga desa</p>
+            </div>
+            <div>
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#profil">Profil Desa</a></li>
+                    <li><a href="index.html#layanan">Layanan</a></li>
+                    <!-- <li><a href="index.html#transparansi">Transparansi</a></li> -->
+                    <li><a href="pariwisata.html">Wisata</a></li>
+                    <li><a href="umkm.html">UMKM</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="index.html#surat-online">Surat Online</a></li>
+                    <li><a href="index.html#pengaduan">Pengaduan</a></li>
+                    <li><a href="index.html#download">Unduh Formulir</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ikuti Kami</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Pemerintahan Desa Pohgading. All rights reserved. <span style="opacity:0.5;">|</span> Dikelola oleh Tim PPID Desa
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="wa-float" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat Pelayanan</span>
+    </a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== DATA UMKM =====
+        const umkmData = {
+            keripik: {
+                id: 'tape',
+                title: 'Tape Gembong',
+                category: 'Makanan Ringan',
+                shortDesc: 'bla bla bla.',
+                fullDesc: 'Keripik Singkong Pohgading merupakan produk unggulan dari Desa Pohgading. Dibuat dari singkong pilihan yang ditanam di lahan subur desa, diolah dengan resep turun-temurun sehingga menghasilkan keripik yang renyah dan gurih. Tersedia berbagai varian rasa: original, pedas manis, balado, dan keju. Kemasan praktis cocok untuk oleh-oleh atau camilan sehari-hari.',
+                contact: 'Ibu – 0812-3456-7892',
+                icon: 'fa-utensils',
+                photos: ['fa-utensils', 'fa-pepper', 'fa-seedling', 'fa-box']
+            },
+            batik: {
+                id: 'batik',
+                title: 'Batik Tulis Pohgading',
+                category: 'Kerajinan',
+                shortDesc: 'Batik tulis dengan motif khas Pohgading. Berkualitas tinggi dan eksklusif.',
+                fullDesc: 'Batik Tulis Pohgading merupakan kerajinan tangan yang dikerjakan oleh para pengrajin batik di desa. Motif yang dihasilkan terinspirasi dari alam sekitar, seperti padi, pohon gading, dan sungai. Setiap helai kain batik diproses dengan teknik canting tulis tradisional, sehingga menghasilkan karya yang unik dan bernilai seni tinggi. Cocok untuk pakaian formal maupun koleksi.',
+                contact: 'Bapak – 0812-3456-7893',
+                icon: 'fa-paint-brush',
+                photos: ['fa-paint-brush', 'fa-palette', 'fa-scroll', 'fa-star']
+            }
+        };
+
+        // ===== RENDER KARTU UMKM =====
+        function renderUmkmCards() {
+            const grid = document.getElementById('umkmGrid');
+            if (!grid) return;
+            grid.innerHTML = Object.values(umkmData).map(u => `
+                <div class="umkm-card" data-id="${u.id}">
+                    <div class="img-placeholder"><i class="fas ${u.icon}"></i></div>
+                    <div class="body">
+                        <span class="badge">${u.category}</span>
+                        <h3>${u.title}</h3>
+                        <div class="category">${u.category}</div>
+                        <p>${u.shortDesc}</p>
+                        <button class="btn btn-sm" onclick="openDetail('${u.id}')">Lihat Detail</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderUmkmCards();
+
+        // ===== SLIDER AUTO-SLIDE =====
+        let slideInterval = null;
+        let currentSlideIndex = 0;
+
+        function startAutoSlide() {
+            const track = document.getElementById('galleryTrack');
+            const dots = document.querySelectorAll('.gallery-nav .dot');
+            if (!track || dots.length === 0) return;
+
+            stopAutoSlide();
+
+            slideInterval = setInterval(() => {
+                const totalSlides = dots.length;
+                currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+                const slideWidth = track.querySelector('.gallery-slide')?.clientWidth || track.clientWidth;
+                track.scrollTo({ left: currentSlideIndex * slideWidth, behavior: 'smooth' });
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentSlideIndex);
+                });
+            }, 4000);
+        }
+
+        function stopAutoSlide() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        }
+
+        // ===== BUKA DETAIL =====
+        let currentDetailId = null;
+
+        function openDetail(id) {
+            const data = umkmData[id];
+            if (!data) return;
+            currentDetailId = id;
+
+            // Set header title
+            document.getElementById('detailTitle').textContent = data.title;
+
+            // Set full info
+            document.getElementById('detailCategory').textContent = data.category;
+            document.getElementById('detailFullTitle').textContent = data.title;
+            document.getElementById('detailDesc').textContent = data.fullDesc;
+            document.getElementById('detailContact').textContent = data.contact;
+
+            // Render galeri
+            const track = document.getElementById('galleryTrack');
+            const nav = document.getElementById('galleryNav');
+            track.innerHTML = '';
+            nav.innerHTML = '';
+            currentSlideIndex = 0;
+
+            const photoCount = data.photos.length;
+            data.photos.forEach((icon, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'gallery-slide';
+                slide.innerHTML = `<i class="fas ${icon}"></i><span class="slide-label">${index + 1} / ${photoCount}</span>`;
+                track.appendChild(slide);
+
+                const dot = document.createElement('button');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.setAttribute('data-index', index);
+                dot.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentSlideIndex = index;
+                    track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' });
+                    const allDots = document.querySelectorAll('.gallery-nav .dot');
+                    allDots.forEach((d, i) => d.classList.toggle('active', i === index));
+                    startAutoSlide();
+                });
+                nav.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.gallery-nav .dot');
+
+            // Update dot aktif saat scroll
+            track.addEventListener('scroll', function() {
+                const scrollLeft = this.scrollLeft;
+                const width = this.clientWidth;
+                const activeIndex = Math.round(scrollLeft / width);
+                if (activeIndex !== currentSlideIndex) {
+                    currentSlideIndex = activeIndex;
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === activeIndex);
+                    });
+                }
+            });
+
+            // Buka overlay — FULL SCREEN
+            const overlay = document.getElementById('detailOverlay');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Mulai auto-slide setelah sedikit delay
+            setTimeout(() => {
+                startAutoSlide();
+            }, 500);
+
+            // Reset auto-slide saat interaksi
+            const resetAutoSlide = () => {
+                stopAutoSlide();
+                setTimeout(startAutoSlide, 3000);
+            };
+            track.addEventListener('touchstart', stopAutoSlide);
+            track.addEventListener('mousedown', stopAutoSlide);
+            track.addEventListener('mouseup', resetAutoSlide);
+            track.addEventListener('touchend', resetAutoSlide);
+        }
+
+        // ===== TUTUP DETAIL =====
+        function closeDetail() {
+            stopAutoSlide();
+            document.getElementById('detailOverlay').classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('closeDetail').addEventListener('click', closeDetail);
+        document.getElementById('backFromDetail').addEventListener('click', closeDetail);
+
+        // ===== SEARCH =====
+        const btnSearch = document.getElementById('btnSearch');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        btnSearch.addEventListener('click', () => {
+            searchOverlay.classList.add('open');
+            searchInput.focus();
+            searchResults.innerHTML = '';
+        });
+        closeSearch.addEventListener('click', () => searchOverlay.classList.remove('open'));
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) searchOverlay.classList.remove('open');
+        });
+
+        searchInput.addEventListener('input', function() {
+            const q = this.value.toLowerCase().trim();
+            if (q.length < 2) { searchResults.innerHTML = ''; return; }
+            const results = Object.values(umkmData).filter(u =>
+                u.title.toLowerCase().includes(q) ||
+                u.shortDesc.toLowerCase().includes(q) ||
+                u.fullDesc.toLowerCase().includes(q) ||
+                u.category.toLowerCase().includes(q)
+            );
+            if (results.length === 0) {
+                searchResults.innerHTML =
+                    `<div style="padding:16px;color:var(--gray);"><i class="fas fa-search"></i> Tidak ada hasil untuk "${q}"</div>`;
+                return;
+            }
+            searchResults.innerHTML = results.map(u => `
+                <div class="item" style="padding:12px 16px;border-bottom:1px solid #f1f5f9;cursor:pointer;transition:var(--transition);border-radius:var(--radius-sm);" onclick="openDetail('${u.id}'); searchOverlay.classList.remove('open');">
+                    <h4 style="font-weight:600;font-size:0.95rem;">${u.title}</h4>
+                    <p style="font-size:0.8rem;color:var(--gray);">${u.category} — ${u.shortDesc}</p>
+                </div>
+            `).join('');
+        });
+
+        // ===== NAV MOBILE =====
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Keyboard shortcut
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                btnSearch.click();
+            }
+            if (e.key === 'Escape') {
+                if (searchOverlay.classList.contains('open')) searchOverlay.classList.remove('open');
+                if (document.getElementById('detailOverlay').classList.contains('open')) closeDetail();
+            }
+        });
+
+        // Resize listener untuk update scroll snap dots
+        window.addEventListener('resize', () => {
+            const track = document.getElementById('galleryTrack');
+            if (track && track.querySelector('.gallery-slide')) {
+                const slideWidth = track.querySelector('.gallery-slide').clientWidth;
+                const scrollLeft = currentSlideIndex * slideWidth;
+                track.scrollTo({ left: scrollLeft, behavior: 'auto' });
+            }
+        });
+
+        console.log('🚀 Halaman UMKM Desa Pohgading siap!');
+    </script>
+
+</body>
+</html>

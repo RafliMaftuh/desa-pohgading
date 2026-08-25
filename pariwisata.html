@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisata Desa Pohgading</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <div style="width:52px;height:52px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:var(--primary);">P</div>
+                <div class="logo-text">
+                    <h1>Desa Pohgading</h1>
+                    <span>Kecamatan Gembong · Kabupaten Pati</span>
+                    <span class="kec"><i class="fas fa-map-pin"></i> Jawa Tengah</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#profil">Profil</a></li>
+                    <li><a href="index.html#layanan">Layanan</a></li>
+                    <!-- <li><a href="index.html#transparansi">Transparansi</a></li> -->
+                    <li><a href="index.html#potensi">Potensi</a></li>
+                    <li><a href="pariwisata.html" class="active">Wisata</a></li>
+                    <li><a href="index.html#kabar">Kabar</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+                <div class="header-jam">
+                    <i class="fas fa-clock"></i>
+                    <span>08.00–14.00 WIB</span>
+                </div>
+                <button class="btn-search" id="btnSearch" aria-label="Cari"><i class="fas fa-search"></i></button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH OVERLAY ===== -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="box">
+            <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+            <input type="text" id="searchInput" placeholder="Cari wisata..." />
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- ===== HERO WISATA ===== -->
+    <section class="hero-wisata">
+        <div class="container">
+            <h1><i class="fas fa-umbrella-beach"></i> Wisata Desa</h1>
+            <p>Destinasi wisata unggulan Desa Pohgading, nikmati keindahan alam dan budaya lokal.</p>
+        </div>
+    </section>
+
+    <!-- ===== DAFTAR WISATA ===== -->
+    <section class="section" id="wisata">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-map-signs"></i> Jelajahi Wisata</h2>
+                <div class="line"></div>
+            </div>
+            <div class="wisata-grid" id="wisataGrid">
+                <!-- akan diisi JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DETAIL OVERLAY ===== -->
+    <div class="detail-overlay" id="detailOverlay">
+        <div class="detail-content">
+            <div class="detail-header">
+                <h2 id="detailTitle">Wisata Gethek</h2>
+                <button class="close-detail" id="closeDetail"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="detail-body">
+                <!-- Galeri Slider -->
+                <div class="gallery-slider">
+                    <div class="gallery-track" id="galleryTrack">
+                        <!-- diisi JS -->
+                    </div>
+                    <div class="gallery-nav" id="galleryNav">
+                        <!-- diisi JS -->
+                    </div>
+                </div>
+
+                <!-- Informasi Detail -->
+                <div class="detail-info">
+                    <h3 id="detailFullTitle">Wisata Gethek</h3>
+                    <div class="description" id="detailDesc">
+                        Deskripsi lengkap wisata.
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info">
+                            <strong>Kontak / Pemesanan</strong>
+                            <span id="detailContact">+62 812-3456-7890</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-back" id="backFromDetail"><i class="fas fa-arrow-left"></i> Kembali ke Daftar Wisata</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4><i class="fas fa-flag" style="color:var(--secondary-light);"></i> Desa Pohgading</h4>
+                <p>Pemerintahan Desa Pohgading, Kecamatan Gembong, Kabupaten Pati, Jawa Tengah. Melayani dengan hati, mengabdi untuk rakyat.</p>
+                <div class="jam-footer">
+                    <i class="fas fa-clock"></i>
+                    <span>Jam Pelayanan: Senin–Jumat 08.00 – 14.00 WIB</span>
+                </div>
+                <p style="margin-top:8px;font-size:0.8rem;"><i class="fas fa-code"></i> Dibangun untuk warga desa</p>
+            </div>
+            <div>
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#profil">Profil Desa</a></li>
+                    <li><a href="index.html#layanan">Layanan</a></li>
+                    <!-- <li><a href="index.html#transparansi">Transparansi</a></li> -->
+                    <li><a href="pariwisata.html">Wisata</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="index.html#surat-online">Surat Online</a></li>
+                    <li><a href="index.html#pengaduan">Pengaduan</a></li>
+                    <li><a href="index.html#download">Unduh Formulir</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ikuti Kami</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Pemerintahan Desa Pohgading. All rights reserved. <span style="opacity:0.5;">|</span> Dikelola oleh Tim PPID Desa
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/" target="_blank" class="wa-float" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat Pelayanan</span>
+    </a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== DATA WISATA =====
+        const wisataData = {
+            gethek: {
+                id: 'gethek',
+                title: 'Wisata Gethek',
+                shortDesc: 'Menikmati keindahan waduk dengan perahu gethek tradisional.',
+                fullDesc: 'Wisata Gethek adalah perahu tradisional yang menyusuri Waduk di Desa Pohgading. Pengunjung dapat menikmati pemandangan hijau, udara segar, dan kehidupan sungai yang tenang. Gethek merupakan sarana transportasi air yang telah digunakan turun-temurun oleh warga setempat. Saat ini, wisata ini menjadi daya tarik bagi wisatawan yang ingin merasakan nuansa pedesaan yang autentik. Perjalanan menyusuri Waduk memakan waktu sekitar 30–45 menit, dengan pemandangan sawah, perkebunan, dan aktivitas warga di tepi sungai.',
+                contact: 'Bapak (Pengelola) – 0812-3456-7890',
+                icon: 'fa-ship',    
+                photos: ['fa-ship', 'fa-tree', 'fa-water', 'fa-mountain-sun']
+            },
+            camping: {
+                id: 'camping',
+                title: 'Poncodan Camping Outdoor',
+                shortDesc: 'Berkemah di tepi waduk dengan pemandangan alam yang memukau. Cocok untuk refreshing dan kegiatan outdoor.',
+                fullDesc: 'Camping di Waduk Gembong menawarkan pengalaman berkemah dengan latar belakang air waduk yang luas dan perbukitan hijau. Tempat ini cocok untuk keluarga, komunitas, atau individu yang ingin melepas penat. Tersedia area tenda yang luas, tempat api unggun, dan spot foto yang instagramable. Fasilitas dasar seperti toilet, mushola, dan warung makan sederhana tersedia di sekitar lokasi. Pengunjung juga dapat menikmati pemandangan matahari terbit dan terbenam yang spektakuler.',
+                contact: 'Pengelola Poncodan Camping – 0812-3456-7891',
+                icon: 'fa-campground',
+                photos: ['fa-campground', 'fa-mountain', 'fa-sun', 'fa-tree', 'fa-water']
+            }
+        };
+
+        // ===== RENDER KARTU WISATA =====
+        function renderWisataCards() {
+            const grid = document.getElementById('wisataGrid');
+            if (!grid) return;
+            grid.innerHTML = Object.values(wisataData).map(w => `
+                <div class="wisata-card" data-id="${w.id}">
+                    <div class="img-placeholder"><i class="fas ${w.icon}"></i></div>
+                    <div class="body">
+                        <h3>${w.title}</h3>
+                        <p>${w.shortDesc}</p>
+                        <button class="btn btn-primary btn-sm" onclick="openDetail('${w.id}')">Lihat Detail</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderWisataCards();
+
+        // ===== VARIABEL SLIDER OTOMATIS =====
+        let autoSlideInterval = null;
+        let currentAutoIndex = 0;
+
+        // ===== BUKA DETAIL =====
+        function openDetail(id) {
+            const data = wisataData[id];
+            if (!data) return;
+
+            // Set header title
+            document.getElementById('detailTitle').textContent = data.title;
+
+            // Set full title & deskripsi
+            document.getElementById('detailFullTitle').textContent = data.title;
+            document.getElementById('detailDesc').textContent = data.fullDesc;
+            document.getElementById('detailContact').textContent = data.contact;
+
+            // Render galeri
+            const track = document.getElementById('galleryTrack');
+            const nav = document.getElementById('galleryNav');
+            track.innerHTML = '';
+            nav.innerHTML = '';
+
+            const photoCount = data.photos.length;
+            data.photos.forEach((icon, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'gallery-slide';
+                slide.innerHTML = `<i class="fas ${icon}"></i><span class="slide-label">${index + 1} / ${photoCount}</span>`;
+                track.appendChild(slide);
+
+                const dot = document.createElement('button');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.setAttribute('data-index', index);
+                dot.addEventListener('click', () => {
+                    stopAutoSlide();
+                    track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' });
+                    startAutoSlide(data.photos.length);
+                });
+                nav.appendChild(dot);
+            });
+
+            // Update dot aktif saat scroll
+            track.addEventListener('scroll', function() {
+                const scrollLeft = this.scrollLeft;
+                const width = this.clientWidth;
+                const activeIndex = Math.round(scrollLeft / width);
+                document.querySelectorAll('.gallery-nav .dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+                currentAutoIndex = activeIndex;
+            });
+
+            // Buka overlay
+            const overlay = document.getElementById('detailOverlay');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Mulai auto slide setelah delay
+            setTimeout(() => {
+                startAutoSlide(data.photos.length);
+            }, 800);
+        }
+
+        // ===== SLIDER OTOMATIS =====
+        function startAutoSlide(totalSlides) {
+            stopAutoSlide();
+            if (totalSlides <= 1) return;
+            autoSlideInterval = setInterval(() => {
+                const track = document.getElementById('galleryTrack');
+                const activeIndex = currentAutoIndex;
+                const nextIndex = (activeIndex + 1) % totalSlides;
+                track.scrollTo({ left: nextIndex * track.clientWidth, behavior: 'smooth' });
+                currentAutoIndex = nextIndex;
+            }, 3000);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+            }
+        }
+
+        // ===== TUTUP DETAIL =====
+        function closeDetail() {
+            stopAutoSlide();
+            document.getElementById('detailOverlay').classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('closeDetail').addEventListener('click', closeDetail);
+        document.getElementById('backFromDetail').addEventListener('click', closeDetail);
+
+        // ===== SEARCH =====
+        const btnSearch = document.getElementById('btnSearch');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        btnSearch.addEventListener('click', () => {
+            searchOverlay.classList.add('open');
+            searchInput.focus();
+            searchResults.innerHTML = '';
+        });
+        closeSearch.addEventListener('click', () => searchOverlay.classList.remove('open'));
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) searchOverlay.classList.remove('open');
+        });
+
+        searchInput.addEventListener('input', function() {
+            const q = this.value.toLowerCase().trim();
+            if (q.length < 2) { searchResults.innerHTML = ''; return; }
+            const results = Object.values(wisataData).filter(w =>
+                w.title.toLowerCase().includes(q) ||
+                w.shortDesc.toLowerCase().includes(q) ||
+                w.fullDesc.toLowerCase().includes(q)
+            );
+            if (results.length === 0) {
+                searchResults.innerHTML =
+                    `<div style="padding:16px;color:var(--gray);"><i class="fas fa-search"></i> Tidak ada hasil untuk "${q}"</div>`;
+                return;
+            }
+            searchResults.innerHTML = results.map(w => `
+                <div class="item" style="padding:12px 16px;border-bottom:1px solid #f1f5f9;cursor:pointer;transition:var(--transition);border-radius:var(--radius-sm);" onclick="openDetail('${w.id}'); searchOverlay.classList.remove('open');">
+                    <h4 style="font-weight:600;font-size:0.95rem;">${w.title}</h4>
+                    <p style="font-size:0.8rem;color:var(--gray);">${w.shortDesc}</p>
+                </div>
+            `).join('');
+        });
+
+        // ===== NAV MOBILE =====
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Keyboard shortcut
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                btnSearch.click();
+            }
+            if (e.key === 'Escape') {
+                if (searchOverlay.classList.contains('open')) searchOverlay.classList.remove('open');
+                if (document.getElementById('detailOverlay').classList.contains('open')) closeDetail();
+            }
+        });
+
+        // Resize listener untuk update scroll snap dots
+        window.addEventListener('resize', () => {
+            const track = document.getElementById('galleryTrack');
+            if (track) {
+                const scrollLeft = track.scrollLeft;
+                const width = track.clientWidth;
+                const activeIndex = Math.round(scrollLeft / width);
+                document.querySelectorAll('.gallery-nav .dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+            }
+        });
+
+        console.log('🚀 Halaman Wisata Desa Pohgading siap!');
+    </script>
+
+</body>
+</html>

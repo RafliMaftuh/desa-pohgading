@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemerintahan Desa Pohgading</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <div style="width:52px;height:52px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:var(--primary);">P</div>
+                <div class="logo-text">
+                    <h1>Desa Pohgading</h1>
+                    <span>Kecamatan Gembong · Kabupaten Pati</span>
+                    <span class="kec"><i class="fas fa-map-pin"></i> Jawa Tengah</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul id="navMenu">
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <!-- <li><a href="#transparansi">Transparansi</a></li> -->
+                    <li><a href="#potensi">Potensi</a></li>
+                    <li><a href="#kabar">Kabar</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="header-jam">
+                    <i class="fas fa-clock"></i>
+                    <span>08.00–14.00 WIB</span>
+                </div>
+                <button class="btn-search" id="btnSearch" aria-label="Cari"><i class="fas fa-search"></i></button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH OVERLAY ===== -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="box">
+            <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+            <input type="text" id="searchInput" placeholder="Cari berita, layanan, atau informasi..." />
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Selamat Datang di <br /><span>Desa Pohgading</span></h2>
+                <p>Website resmi Pemerintahan Desa Pohgading, Kecamatan Gembong, Kabupaten Pati. Melayani dengan transparan dan profesional.</p>
+
+                <div class="sambutan-card">
+                    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                    <div class="teks">
+                        "Assalamu'alaikum wr.wb. Selamat datang di website resmi Desa Pohgading. Kami berkomitmen memberikan pelayanan terbaik untuk seluruh warga."
+                    </div>
+                    <div class="author">
+                        <i class="fas fa-user"></i> Zubaidi Abdillah, Kepala Desa
+                    </div>
+                </div>
+
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> Transparan</span>
+                    <span class="badge"><i class="fas fa-handshake"></i> Profesional</span>
+                    <span class="badge"><i class="fas fa-users"></i> Mengabdi</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="landmark-placeholder">
+                    <i class="fas fa-landmark"></i>
+                    <p><strong>Landmark Desa Pohgading</strong><br />Foto landmark desa akan ditampilkan di sini</p>
+                    <span style="font-size:0.7rem;opacity:0.5;"><i class="fas fa-upload"></i> ini nanti menampilkan foto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PENGUMUMAN ===== -->
+    <section class="pengumuman" id="pengumuman">
+        <div class="container">
+            <div class="label"><i class="fas fa-bullhorn"></i> PENGUMUMAN</div>
+            <div class="teks">
+                <span>📢 Pengumuman: Bla Bla</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUICK LINKS ===== -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="links">
+                <a href="#surat-online"><i class="fas fa-file-signature"></i> Surat Online</a>
+                <a href="#pengaduan"><i class="fas fa-comment-dots"></i> Pengaduan</a>
+                <a href="#download"><i class="fas fa-download"></i> Unduh Formulir</a>
+                <a href="#profil"><i class="fas fa-info-circle"></i> Profil Desa</a>
+                <!-- <a href="#transparansi"><i class="fas fa-chart-pie"></i> APBDes</a> -->
+                <a href="pariwisata.html"><i class="fas fa-umbrella-beach"></i> Wisata</a>
+            </div>
+            <div class="qr-box">
+                <div class="qr-placeholder"><i class="fas fa-qrcode"></i></div>
+                <p><i class="fas fa-upload"></i> Tempat untuk kode QR Layanan</p>
+                <span style="font-size:0.7rem;color:#a0b0c0;">Ini Menampilkan QR Code :D</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATISTIK ===== -->
+    <section class="statistik" id="statistik">
+        <div class="container">
+            <div class="stat-card">
+                <span class="icon"><i class="fas fa-users"></i></span>
+                <div class="angka">Null</div>
+                <div class="label">Jumlah Penduduk</div>
+            </div>
+            <div class="stat-card">
+                <span class="icon"><i class="fas fa-vector-square"></i></span>
+                <div class="angka">Null</div>
+                <div class="label">Luas Wilayah (Ha)</div>
+            </div>
+            <div class="stat-card">
+                <span class="icon"><i class="fas fa-tree"></i></span>
+                <div class="angka">6</div>
+                <div class="label">Jumlah Dusun</div>
+            </div>
+            <div class="stat-card">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <div class="angka">Null</div>
+                <div class="label">Jumlah RT</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KABAR DESA (Beranda) ===== -->
+    <section class="kabar-desa" id="kabar-desa">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-newspaper"></i> Kabar Desa</h2>
+                <a href="#kabar" class="btn btn-outline" style="font-size:0.85rem;padding:8px 20px;">Lihat Semua <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="kabar-grid" id="kabarGrid">
+                <!-- diisi JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROFIL DESA ===== -->
+    <section class="section" id="profil">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-flag"></i> Profil Desa</h2>
+                <div class="line"></div>
+                <p>Mengenal lebih dekat Desa Pohgading</p>
+            </div>
+            <div class="profil-grid">
+                <div class="card">
+                    <h3><i class="fas fa-history"></i> Sejarah & Asal-Usul</h3>
+                    <p>Desa Pohgading merupakan desa yang terletak di Kecamatan Gembong, Kabupaten Pati, Jawa Tengah. Menurut cerita turun-temurun, nama "Pohgading" berasal dari kata "poh" (pohon) dan "gading" (gading) yang merujuk pada pohon gading yang banyak tumbuh di wilayah ini pada masa lampau. Desa ini telah berdiri sejak zaman kolonial dan terus berkembang menjadi desa yang maju dengan tetap menjunjung tinggi adat dan budaya lokal.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-bullseye"></i> Visi & Misi</h3>
+                    <p><strong>Visi:</strong></p>
+                    <p>"Null"</p>
+                    <p><strong>Misi:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Null</li>
+                        <li><i class="fas fa-check-circle"></i> Null</li>
+                        <li><i class="fas fa-check-circle"></i> Null</li>
+                        <li><i class="fas fa-check-circle"></i> Null</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-map-marked-alt"></i> Demografi & Peta</h3>
+                    <ul>
+                        <li><i class="fas fa-users"></i> <strong>Jumlah Penduduk:</strong> - jiwa</li>
+                        <li><i class="fas fa-venus-mars"></i> <strong>Laki-laki:</strong> - jiwa | <strong>Perempuan:</strong> - jiwa</li>
+                        <li><i class="fas fa-vector-square"></i> <strong>Luas:</strong> - Ha</li>
+                        <li><i class="fas fa-tree"></i> <strong>Dusun:</strong> Pohgading, Krajan, Rambutan, -</li>
+                    </ul>
+                    <div class="map-container" id="mapContainer">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8!2d110.95!3d-6.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDUnMDAuMCJTIDExMMKwNTcnMDAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Peta Desa Pohgading">
+                    </iframe>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-sitemap"></i> Struktur Organisasi & SOTK</h3>
+                <p style="margin-bottom:16px;">Perangkat Desa Pohgading masa jabatan 2023–2029:</p>
+                <div class="struktur-wrap">
+                    <div class="struktur-list" id="strukturList">
+                        <!-- diisi JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LAYANAN PUBLIK ===== -->
+<section class="section section-alt" id="layanan">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-hand-holding-heart"></i> Layanan Publik</h2>
+            <div class="line"></div>
+            <p>Berbagai layanan administrasi untuk warga Desa Pohgading</p>
+        </div>
+
+        <div class="layanan-grid">
+            <div class="layanan-card">
+                <div class="icon"><i class="fas fa-book-open"></i></div>
+                <h3>Panduan Layanan</h3>
+                <p>Syarat dan alur pengurusan administrasi: KTP, KK, Surat Pengantar, Nikah, Keterangan Usaha, dll.</p>
+                <button class="btn btn-outline btn-sm" onclick="alert('Panduan layanan akan segera ditampilkan. Hubungi kantor desa untuk info lengkap.')"><i class="fas fa-info-circle"></i> Lihat Panduan</button>
+            </div>
+            <div class="layanan-card" id="surat-online">
+                <div class="icon"><i class="fas fa-file-signature"></i></div>
+                <h3>Layanan Surat Online</h3>
+                <p>Ajukan permohonan surat secara mandiri melalui form di bawah ini.</p>
+                <button class="btn btn-primary btn-sm" onclick="document.getElementById('suratForm').scrollIntoView({behavior:'smooth'})"><i class="fas fa-pen"></i> Ajukan Sekarang</button>
+            </div>
+            <div class="layanan-card" id="pengaduan">
+                <div class="icon"><i class="fas fa-comment-dots"></i></div>
+                <h3>Kanal Pengaduan / Aspirasi</h3>
+                <p>Kirimkan masukan, kritik, atau pengaduan Anda. Terintegrasi dengan SP4N-LAPOR!</p>
+                <button class="btn btn-red btn-sm" onclick="document.getElementById('pengaduanForm').scrollIntoView({behavior:'smooth'})"><i class="fas fa-bullhorn"></i> Sampaikan Aspirasi</button>
+            </div>
+        </div>
+
+        <!-- Form Surat Online -->
+        <div class="form-surat" id="suratForm">
+            <h3><i class="fas fa-pen-alt" style="color:var(--secondary);"></i> Form Pengajuan Surat Online</h3>
+            <form id="formSurat" onsubmit="return submitSurat(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" placeholder="Nama sesuai KTP" required />
+                    </div>
+                    <div class="form-group">
+                        <label>NIK</label>
+                        <input type="text" placeholder="16 digit NIK" required />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Jenis Surat</label>
+                        <select required>
+                            <option value="">Pilih jenis surat</option>
+                            <option>Surat Keterangan Domisili</option>
+                            <option>Surat Keterangan Usaha</option>
+                            <option>Surat Pengantar KTP</option>
+                            <option>Surat Pengantar KK</option>
+                            <option>Surat Keterangan Nikah</option>
+                            <option>Surat Keterangan Pindah</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>No. WhatsApp</label>
+                        <input type="text" placeholder="08123456789" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Keterangan / Keperluan</label>
+                    <textarea placeholder="Jelaskan keperluan pengajuan surat..." required></textarea>
+                </div>
+                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Kirim Pengajuan</button>
+                <span style="font-size:0.75rem;color:var(--gray);margin-left:12px;"><i class="fas fa-info-circle"></i> Akan diproses oleh petugas desa</span>
+            </form>
+        </div>
+
+        <!-- Form Pengaduan -->
+        <div class="form-surat" id="pengaduanForm" style="margin-top:16px;">
+            <h3><i class="fas fa-comment" style="color:var(--red);"></i> Form Pengaduan / Aspirasi</h3>
+            <form id="formPengaduan" onsubmit="return submitPengaduan(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" placeholder="Nama lengkap" required />
+                    </div>
+                    <div class="form-group">
+                        <label>No. WhatsApp / Email</label>
+                        <input type="text" placeholder="Kontak yang bisa dihubungi" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Jenis Aspirasi</label>
+                    <select required>
+                        <option value="">Pilih jenis</option>
+                        <option>Pengaduan</option>
+                        <option>Kritik / Saran</option>
+                        <option>Permohonan Informasi</option>
+                        <option>Laporan</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Isi Pesan</label>
+                    <textarea placeholder="Sampaikan aspirasi Anda secara jelas..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-red"><i class="fas fa-paper-plane"></i> Kirim Aspirasi</button>
+                <span style="font-size:0.75rem;color:var(--gray);margin-left:12px;"><i class="fas fa-info-circle"></i> Terintegrasi dengan SP4N-LAPOR!</span>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRANSPARANSI & KEUANGAN ===== -->
+<!--    
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-chart-pie"></i> Transparansi & Keuangan</h2>
+            <div class="line"></div>
+            <p>Laporan APBDes dan realisasi pembangunan Desa Pohgading</p>
+        </div>
+        <div class="transparansi-grid">
+            <div class="transparansi-card">
+                <h3><i class="fas fa-coins"></i> APBDes Tahun Berjalan</h3>
+                <div class="infografis">
+                    <p><strong>Anggaran Pendapatan dan Belanja Desa (APBDes) 2026</strong></p>
+                    <div class="chart-bars">
+                        <div class="bar" style="height:80px;"><span>Pendapatan</span></div>
+                        <div class="bar" style="height:60px;background:var(--secondary);"><span>Belanja</span></div>
+                        <div class="bar" style="height:90px;background:var(--red);"><span>Pembangunan</span></div>
+                        <div class="bar" style="height:45px;background:#6c8b9f;"><span>Lainnya</span></div>
+                    </div>
+                    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:16px;font-size:0.8rem;">
+                        <span><span style="display:inline-block;width:12px;height:12px;background:var(--primary);border-radius:2px;"></span> Pendapatan: Rp 2,4 M</span>
+                        <span><span style="display:inline-block;width:12px;height:12px;background:var(--secondary);border-radius:2px;"></span> Belanja: Rp 1,8 M</span>
+                        <span><span style="display:inline-block;width:12px;height:12px;background:var(--red);border-radius:2px;"></span> Pembangunan: Rp 2,7 M</span>
+                    </div>
+                    <p style="font-size:0.75rem;color:var(--gray);margin-top:8px;"><i class="fas fa-info-circle"></i> Data real-time dapat diakses melalui aplikasi Siskeudes</p>
+                </div>
+            </div>
+            <div class="transparansi-card">
+                <h3><i class="fas fa-hard-hat"></i> Realisasi Pembangunan</h3>
+                <ul style="margin-top:8px;">
+                    <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef2f6;">
+                        <span><i class="fas fa-road" style="color:var(--primary);"></i> Perbaikan Jalan Desa</span>
+                        <span style="font-weight:600;color:var(--primary);">85%</span>
+                    </li>
+                    <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef2f6;">
+                        <span><i class="fas fa-water" style="color:var(--primary);"></i> Sumur Bor</span>
+                        <span style="font-weight:600;color:var(--secondary);">60%</span>
+                    </li>
+                    <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef2f6;">
+                        <span><i class="fas fa-mosque" style="color:var(--primary);"></i> Renovasi Balai Desa</span>
+                        <span style="font-weight:600;color:var(--red);">40%</span>
+                    </li>
+                    <li style="display:flex;justify-content:space-between;padding:8px 0;">
+                        <span><i class="fas fa-seedling" style="color:var(--primary);"></i> Program Ketahanan Pangan</span>
+                        <span style="font-weight:600;color:var(--primary);">90%</span>
+                    </li>
+                </ul>
+                <div style="margin-top:12px;background:var(--light);padding:12px;border-radius:var(--radius-sm);font-size:0.85rem;color:var(--gray);">
+                    <i class="fas fa-camera"></i> Potret kegiatan pembangunan tersedia di galeri desa.
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- ===== POTENSI DESA & EKONOMI ===== -->
+<section class="section section-alt" id="potensi">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-seedling"></i> Potensi Desa & Ekonomi</h2>
+            <div class="line"></div>
+            <p>UMKM, pariwisata, dan BUMDes Desa Pohgading</p>
+        </div>
+        <div class="potensi-grid">
+            <div class="potensi-card">
+                <div class="icon"><i class="fas fa-store"></i></div>
+                <h3>UMKM Desa</h3>
+                <p>Directory produk lokal: makanan, kerajinan, dan hasil pertanian.</p>
+                <a href="umkm.html" class="btn btn-outline btn-sm">Lihat UMKM</a>
+            </div>
+            <div class="potensi-card">
+                <div class="icon"><i class="fas fa-umbrella-beach"></i></div>
+                <h3>Pariwisata & Budaya</h3>
+                <p>Destinasi wisata dan potensi budaya lokal yang menarik.</p>
+                <a href="pariwisata.html" class="btn btn-outline btn-sm">Jelajahi</a>
+            </div>
+            <div class="potensi-card">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <h3>BUMDes</h3>
+                <p>Badan Usaha Milik Desa — profil & bidang usaha.</p>
+                <button class="btn btn-outline btn-sm" onclick="alert('Profil BUMDes sedang disusun.')">Info BUMDes</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== KABAR / BERITA DESA (Halaman penuh) ===== -->
+<section class="section" id="kabar">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-newspaper"></i> Kabar / Berita Desa</h2>
+            <div class="line"></div>
+            <p>Informasi terkini seputar Desa Pohgading</p>
+        </div>
+        <div class="berita-kategori" id="beritaKategori">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="pembangunan">Pembangunan</button>
+            <button class="filter-btn" data-filter="sosial">Sosial & Budaya</button>
+            <button class="filter-btn" data-filter="kesehatan">Kesehatan</button>
+            <button class="filter-btn" data-filter="edukasi">Edukasi</button>
+        </div>
+        <div class="berita-list" id="beritaList">
+            <!-- diisi JS -->
+        </div>
+    </div>
+</section>
+
+<!-- ===== DOWNLOAD ===== -->
+<section class="section section-alt" id="download">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-download"></i> Unduh Dokumen</h2>
+            <div class="line"></div>
+            <p>Formulir dan dokumen penting untuk warga</p>
+        </div>
+        <div class="download-grid">
+            <div class="download-item">
+                <i class="fas fa-file-pdf"></i>
+                <div class="info">
+                    <h4>Formulir KK</h4>
+                    <p>Formulir permohonan Kartu Keluarga</p>
+                    <a href="#" onclick="alert('Unduh formulir KK')"><i class="fas fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+            <div class="download-item">
+                <i class="fas fa-file-pdf"></i>
+                <div class="info">
+                    <h4>Formulir KTP</h4>
+                    <p>Formulir permohonan KTP</p>
+                    <a href="#" onclick="alert('Unduh formulir KTP')"><i class="fas fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+            <div class="download-item">
+                <i class="fas fa-file-pdf"></i>
+                <div class="info">
+                    <h4>Surat Keterangan Usaha</h4>
+                    <p>Formulir permohonan SKU</p>
+                    <a href="#" onclick="alert('Unduh formulir SKU')"><i class="fas fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+            <div class="download-item">
+                <i class="fas fa-file-pdf"></i>
+                <div class="info">
+                    <h4>Formulir Nikah</h4>
+                    <p>Formulir permohonan surat nikah</p>
+                    <a href="#" onclick="alert('Unduh formulir nikah')"><i class="fas fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+            <div class="download-item">
+                <i class="fas fa-file-pdf"></i>
+                <div class="info">
+                    <h4>APBDes 2026</h4>
+                    <p>Dokumen anggaran desa</p>
+                    <a href="#" onclick="alert('Unduh APBDes 2026')"><i class="fas fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== KONTAK & PPID ===== -->
+<section class="section" id="kontak">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-phone-alt"></i> Kontak & PPID</h2>
+            <div class="line"></div>
+            <p>Hubungi kami atau ajukan permohonan informasi publik</p>
+        </div>
+        <div class="kontak-grid">
+            <div class="kontak-info">
+                <div class="item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="detail"><strong>Alamat</strong> Jl. Desa Pohgading No. 1, Kec. Gembong, Kab. Pati, Jawa Tengah</div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-clock"></i>
+                    <div class="detail"><strong>Jam Operasional</strong> Senin–Jumat 08.00 – 14.00 WIB</div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-phone"></i>
+                    <div class="detail"><strong>Telepon / WhatsApp</strong> Undefined</div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="detail"><strong>Email</strong> undefined</div>
+                </div>
+                <div style="margin-top:8px;">
+                    <a href="https://wa.me/" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+                </div>
+            </div>
+            <div class="ppid-box">
+                <h3><i class="fas fa-info-circle"></i> PPID Desa</h3>
+                <p><strong>Pejabat Pengelola Informasi dan Dokumentasi (PPID) Desa Pohgading</strong></p>
+                <p style="margin-top:8px;">Layanan permohonan informasi publik sesuai UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik.</p>
+                <button class="btn btn-outline btn-sm" onclick="alert('Form permohonan informasi publik akan segera tersedia.')"><i class="fas fa-file-alt"></i> Ajukan Permohonan Informasi</button>
+                <p style="font-size:0.75rem;color:var(--gray);margin-top:8px;"><i class="fas fa-clock"></i> Direspon maksimal 1x24 jam kerja</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div>
+            <h4><i class="fas fa-flag" style="color:var(--secondary-light);"></i> Desa Pohgading</h4>
+            <p>Pemerintahan Desa Pohgading, Kecamatan Gembong, Kabupaten Pati, Jawa Tengah. Melayani dengan hati, mengabdi untuk rakyat.</p>
+            <div class="jam-footer">
+                <i class="fas fa-clock"></i>
+                <span>Jam Pelayanan: Senin–Jumat 08.00 – 14.00 WIB</span>
+            </div>
+            <p style="margin-top:8px;font-size:0.8rem;"><i class="fas fa-code"></i> Dibangun untuk warga desa</p>
+        </div>
+        <div>
+            <h4>Navigasi</h4>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#profil">Profil Desa</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <!-- <li><a href="#transparansi">Transparansi</a></li> -->
+                <li><a href="pariwisata.html">Wisata</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Layanan</h4>
+            <ul>
+                <li><a href="#surat-online">Surat Online</a></li>
+                <li><a href="#pengaduan">Pengaduan</a></li>
+                <li><a href="#download">Unduh Formulir</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Ikuti Kami</h4>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            &copy; 2026 Pemerintahan Desa Pohgading. All rights reserved. <span style="opacity:0.5;">|</span> Dikelola oleh Tim PPID Desa
+        </div>
+    </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/" target="_blank" class="wa-float" aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat Pelayanan</span>
+</a>
+
+<!-- ============================================================ -->
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // ===== DATA =====
+    const perangkatDesa = [
+        { nama: "ZUBAIDI ABDILLAH", jabatan: "Kepala Desa" },
+        { nama: "PURYANTO, S.E.", jabatan: "Sekretaris Desa" },
+        { nama: "PARSO, S.Pd.I.", jabatan: "Kasi Kesra" },
+        { nama: "SUSAEMI", jabatan: "Kasi Pemerintahan" },
+        { nama: "SARNO", jabatan: "Kaur Keuangan" },
+        { nama: "ENY HERAWATI, S.Pd.", jabatan: "PDL" },
+        { nama: "DARYANTO", jabatan: "PDL" },
+        { nama: "SRI MURWATI, S.Pd.", jabatan: "PDL" },
+        { nama: "DARMANTO", jabatan: "PDL" },
+        { nama: "NGATMIN", jabatan: "Kadus" },
+        { nama: "MUHAMMAD SYAIFUDDIN", jabatan: "Kadus" }
+    ];
+
+    const beritaData = [{
+        id: 1,
+        judul: "Gotong Royong Bersihkan Saluran Air",
+        kategori: "sosial",
+        tanggal: "20 Agustus 2026",
+        deskripsi: "Warga Desa Pohgading bersama-sama membersihkan saluran air di tiga dusun untuk mencegah banjir.",
+        tag: "Sosial & Budaya"
+    }, {
+        id: 2,
+        judul: "Pembangunan Jalan Dusun Kajar Dimulai",
+        kategori: "pembangunan",
+        tanggal: "15 Agustus 2026",
+        deskripsi: "Proyek perbaikan jalan sepanjang 1,2 km di Dusun Kajar resmi dimulai dengan anggaran APBDes 2026.",
+        tag: "Pembangunan"
+    }, {
+        id: 3,
+        judul: "Posyandu Desa Gelar Cek Kesehatan Gratis",
+        kategori: "kesehatan",
+        tanggal: "10 Agustus 2026",
+        deskripsi: "Posyandu Desa Pohgading mengadakan layanan cek kesehatan gratis bagi lansia dan balita.",
+        tag: "Kesehatan"
+    }, {
+        id: 4,
+        judul: "Pelatihan UMKM bagi Ibu-ibu PKK",
+        kategori: "edukasi",
+        tanggal: "5 Agustus 2026",
+        deskripsi: "Ibu-ibu PKK mengikuti pelatihan pengolahan makanan dan pemasaran digital.",
+        tag: "Edukasi"
+    }];
+
+    // ===== RENDER STRUKTUR =====
+    function renderStruktur() {
+        const container = document.getElementById('strukturList');
+        if (!container) return;
+        container.innerHTML = perangkatDesa.map(p => `
+            <div class="struktur-item">
+                <div class="info">
+                    <div class="nama">${p.nama}</div>
+                    <div class="jabatan">${p.jabatan}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+    renderStruktur();
+
+    // ===== RENDER KABAR (Beranda) =====
+    function renderKabarBeranda() {
+        const grid = document.getElementById('kabarGrid');
+        if (!grid) return;
+        const latest = beritaData.slice(0, 4);
+        grid.innerHTML = latest.map(b => `
+            <div class="kabar-card">
+                <div class="img-placeholder"><i class="fas fa-image"></i></div>
+                <div class="body">
+                    <span class="tag">${b.tag || 'Umum'}</span>
+                    <h3>${b.judul}</h3>
+                    <p>${b.deskripsi}</p>
+                    <div class="meta">
+                        <span><i class="far fa-calendar-alt"></i> ${b.tanggal}</span>
+                        <a href="#" onclick="alert('Baca selengkapnya: ${b.judul}')">Baca <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    renderKabarBeranda();
+
+    // ===== RENDER BERITA (halaman penuh) =====
+    function renderBerita(filter = 'all') {
+        const list = document.getElementById('beritaList');
+        if (!list) return;
+        let filtered = filter === 'all' ? beritaData : beritaData.filter(b => b.kategori === filter);
+        if (filtered.length === 0) {
+            list.innerHTML =
+                `<div style="text-align:center;padding:40px;color:var(--gray);"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:12px;"></i> Belum ada berita untuk kategori ini.</div>`;
+            return;
+        }
+        list.innerHTML = filtered.map(b => `
+            <div class="berita-item" data-kategori="${b.kategori}">
+                <div class="thumb"><i class="fas fa-file-alt"></i></div>
+                <div class="info">
+                    <h4>${b.judul}</h4>
+                    <p>${b.deskripsi}</p>
+                    <div class="meta">
+                        <span><i class="far fa-calendar-alt"></i> ${b.tanggal}</span>
+                        <span class="tag">${b.tag || 'Umum'}</span>
+                        <span><a href="#" onclick="alert('Baca selengkapnya: ${b.judul}')" style="color:var(--primary);font-weight:600;">Baca <i class="fas fa-arrow-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    renderBerita('all');
+
+    // ===== FILTER BERITA =====
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            renderBerita(this.dataset.filter);
+        });
+    });
+
+    // ===== NAVIGASI MOBILE =====
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+
+    // ===== SCROLL OFFSET untuk navigasi =====
+    document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // hanya untuk anchor internal
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    // update active class
+                    document.querySelectorAll('#navMenu a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                    // tutup mobile menu
+                    navMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // ===== SEARCH =====
+    const btnSearch = document.getElementById('btnSearch');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const closeSearch = document.getElementById('closeSearch');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    btnSearch.addEventListener('click', () => {
+        searchOverlay.classList.add('open');
+        searchInput.focus();
+        searchResults.innerHTML = '';
+    });
+    closeSearch.addEventListener('click', () => {
+        searchOverlay.classList.remove('open');
+    });
+    searchOverlay.addEventListener('click', (e) => {
+        if (e.target === searchOverlay) searchOverlay.classList.remove('open');
+    });
+
+    searchInput.addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (q.length < 2) { searchResults.innerHTML = ''; return; }
+        const results = beritaData.filter(b =>
+            b.judul.toLowerCase().includes(q) ||
+            b.deskripsi.toLowerCase().includes(q) ||
+            b.tag.toLowerCase().includes(q)
+        );
+        if (results.length === 0) {
+            searchResults.innerHTML =
+                `<div style="padding:16px;color:var(--gray);"><i class="fas fa-search"></i> Tidak ada hasil untuk "${q}"</div>`;
+            return;
+        }
+        searchResults.innerHTML = results.map(b => `
+            <div class="item" onclick="alert('${b.judul} - ${b.deskripsi}')">
+                <h4>${b.judul}</h4>
+                <p>${b.deskripsi.substring(0, 80)}${b.deskripsi.length > 80 ? '...' : ''}</p>
+            </div>
+        `).join('');
+    });
+
+    // ===== SUBMIT SURAT =====
+    function submitSurat(e) {
+        e.preventDefault();
+        const form = e.target;
+        const nama = form.querySelector('input[placeholder="Nama sesuai KTP"]')?.value || '';
+        if (!nama) { alert('Harap isi nama lengkap.'); return false; }
+        alert('Pengajuan surat berhasil dikirim! Silakan tunggu konfirmasi dari petugas.');
+        form.reset();
+        return false;
+    }
+
+    // ===== SUBMIT PENGADUAN =====
+    function submitPengaduan(e) {
+        e.preventDefault();
+        const form = e.target;
+        const nama = form.querySelector('input[placeholder="Nama lengkap"]')?.value || '';
+        if (!nama) { alert('Harap isi nama.'); return false; }
+        alert('Aspirasi Anda telah diterima dan akan segera ditindaklanjuti.');
+        form.reset();
+        return false;
+    }
+
+    // ===== SCROLL SPY untuk active nav =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#navMenu a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        sections.forEach(section => {
+            const top = section.offsetTop - headerHeight - 30;
+            if (window.scrollY >= top) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+        if (window.scrollY < 100) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector('#navMenu a[href="#home"]')?.classList.add('active');
+        }
+    });
+
+    // ===== KEYBOARD SHORTCUT: Ctrl+K / Cmd+K untuk search =====
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            btnSearch.click();
+        }
+        if (e.key === 'Escape') {
+            if (searchOverlay.classList.contains('open')) {
+                searchOverlay.classList.remove('open');
+            }
+        }
+    });
+
+    console.log('🚀 Website Desa Pohgading siap! (tanpa fitur edit)');
+</script>
+
+</body>
+</html>
